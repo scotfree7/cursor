@@ -1,0 +1,56 @@
+"""
+User-specific settings and preferences.
+Copy this file to user_settings.py and customize for your needs.
+This file should NOT be committed to version control.
+"""
+
+# User Trading Preferences
+USER_TRADING_PREFERENCES = {
+    'default_order_type': 'MARKET',  # MARKET or LIMIT
+    'preferred_position_size': 500,   # Default position size in dollars
+    'max_daily_trades': 5,           # Maximum number of trades per day
+    'trading_hours': {
+        'start': '09:30',            # Market open
+        'end': '16:00'              # Market close
+    }
+}
+
+# Risk Tolerance Settings
+USER_RISK_SETTINGS = {
+    'max_portfolio_risk': 5.0,      # Maximum portfolio risk percentage
+    'preferred_stop_loss': 2.0,     # Preferred stop loss percentage
+    'preferred_take_profit': 6.0    # Preferred take profit percentage
+}
+
+# Personal Watchlists
+USER_WATCHLISTS = {
+    'main': ['AAPL', 'MSFT', 'GOOGL'],
+    'crypto': ['BTC-USD', 'ETH-USD'],
+    'sectors': {
+        'tech': ['AAPL', 'MSFT', 'GOOGL'],
+        'finance': ['JPM', 'BAC', 'GS']
+    }
+}
+
+# Alert Settings
+USER_ALERTS = {
+    'price_change_threshold': 5.0,  # Percentage
+    'volume_spike_threshold': 200,  # Percentage above average
+    'enable_email_alerts': False,
+    'enable_push_notifications': True
+}
+
+# Display Preferences
+DISPLAY_SETTINGS = {
+    'default_chart_timeframe': '1D',
+    'show_indicators': ['MA', 'RSI', 'VWAP'],
+    'color_theme': 'dark',
+    'show_grid': True
+}
+
+# API Keys (Move these to .env file in production)
+API_KEYS = {
+    'alpha_vantage': 'your_key_here',
+    'quiver_quant': 'your_key_here',
+    'td_ameritrade': 'your_key_here'
+} 
